@@ -1,74 +1,75 @@
 
-async function fetchTodos() {
+async function getTodosFromAPI() {
     const response = await fetch('https://jsonplaceholder.typicode.com/todos');
-    const todos = await response.json();
-  
-    showSummary(todos);
+    const todos = await response.json(); 
+    showTheSummary(todos); 
   }
   
   
-  function calculateSummary(todos) {
-    const total = todos.length;
+  function calculateData(todos) {
+    const totalTodos = todos.length;
+  
+  
+    const completed = todos.filter(todo => todo.completed);
+    const completedCount = completed.length;
   
     
-    const completedTodos = todos.filter(todo => todo.completed);
-    const completedCount = completedTodos.length;
-    const percentCompleted = ((completedCount / total) * 100).toFixed(2);
+    const percent = ((completedCount / totalTodos) * 100).toFixed(2);
   
-    
-    const todosPerUser = {};
+    const userTodoCount = {};
     todos.forEach(todo => {
-      const userId = todo.userId;
-      if (todosPerUser[userId]) {
-        todosPerUser[userId]++;
+      const user = todo.userId;
+      if (userTodoCount[user]) {
+        userTodoCount[user]++;
       } else {
-        todosPerUser[userId] = 1;
+        userTodoCount[user] = 1;
       }
     });
   
-  
-    let maxUserId = null;
-    let maxCount = 0;
-    for (let userId in todosPerUser) {
-      if (todosPerUser[userId] > maxCount) {
-        maxCount = todosPerUser[userId];
-        maxUserId = userId;
+   
+    let topUser = null;
+    let max = 0;
+    for (let user in userTodoCount) {
+      if (userTodoCount[user] > max) {
+        max = userTodoCount[user];
+        topUser = user;
       }
     }
   
-    
-    const grouped = {
-      Completed: completedTodos.length,
-      Incomplete: total - completedTodos.length
+  
+    const groupedData = {
+      Completed: completedCount,
+      Incomplete: totalTodos - completedCount
     };
   
+    
     return {
-      total,
+      totalTodos,
       completedCount,
-      percentCompleted,
-      maxUserId,
-      maxCount,
-      grouped
+      percent,
+      topUser,
+      max,
+      groupedData
     };
   }
   
+
+  function showTheSummary(todos) {
+    const result = calculateData(todos);
   
-  function showSummary(todos) {
-    const summary = calculateSummary(todos);
-  
-    const html = `
-      <p>✅ Completed: ${summary.completedCount} / ${summary.total} (${summary.percentCompleted}%)</p>
-      <p>🏆 User with most todos: User ID ${summary.maxUserId} (${summary.maxCount} todos)</p>
-      <p>📦 Grouped Todos:</p>
+    const content = `
+      <p>✅ Completed: ${result.completedCount} / ${result.totalTodos} (${result.percent}%)</p>
+      <p>🏆 Top User: User ${result.topUser} (${result.max} tasks)</p>
+      <p>📦 Grouped:</p>
       <ul>
-        <li>Completed: ${summary.grouped.Completed}</li>
-        <li>Incomplete: ${summary.grouped.Incomplete}</li>
+        <li>Completed: ${result.groupedData.Completed}</li>
+        <li>Incomplete: ${result.groupedData.Incomplete}</li>
       </ul>
     `;
   
-    document.getElementById('summary').innerHTML = html;
+    document.getElementById('summary').innerHTML = content;
   }
   
- 
-  fetchTodos();
+  
+  getTodosFromAPI();
   
