@@ -1,0 +1,31 @@
+.card{
+  border: 2px solid wheat;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  padding: 30px;
+  margin: 40px;
+  text-align: center;
+  display: inline-block;
+  max-width: 150px;
+  max-height: auto;
+}
+
+.card .cardImage{
+  max-width: 60%;
+  height: 50%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .card-text1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  font-style: italic;
+  color: red;
+}
+
+.card .card-text2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  color: rgb(222, 41, 41);
+}

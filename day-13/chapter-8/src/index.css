@@ -1,0 +1,54 @@
+.space-container {
+    background: radial-gradient(circle at top, #0b0c10, #1f2833);
+    color: #66fcf1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+  }
+  
+  .galaxy-number {
+    font-size: 120px;
+    color: #45a29e;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px #66fcf1, 0 0 30px #1f2833;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+  }
+  
+  .space-btn {
+    background-color: #45a29e;
+    color: #0b0c10;
+  }
+  
+  .space-btn:hover {
+    background-color: #66fcf1;
+    transform: scale(1.05);
+  }
+  
+  .reset-btn {
+    background-color: #c5c6c7;
+    color: #1f2833;
+  }
+  
+  .reset-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+  }
+  
