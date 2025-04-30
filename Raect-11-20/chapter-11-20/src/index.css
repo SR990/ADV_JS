@@ -60,3 +60,37 @@
     background-color: #fbc02d;
   }
   
+
+  .clock-container {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock {
+    background-color: rgba(255, 255, 255, 0.2); /* slight white transparent */
+    backdrop-filter: blur(10px); /* Blur the background behind clock */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+  
+  .clock span {
+    font-size: 48px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .box {
+    border: 3px solid black;
+    padding: 25px;
+   
+  }
+  
+  
+  
