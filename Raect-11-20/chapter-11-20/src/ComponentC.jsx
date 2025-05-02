@@ -1,18 +1,13 @@
-import ComponentD from "./ComponentD"
-import React,{useContext} from "react"
-import { userContext } from "./ComponentA"
-function ComponentC(){
+import ComponentD from "./ComponentD";
 
-    const newUser = useContext(userContext)
-    return(
-        <div className="box">
-            <h2>por ra re {newUser}</h2>
-            ComponenC
-            
-            <br />
-            <ComponentD />
-        </div>
-    )
+
+function ComponentC() {
+  return (
+    <div className="component-c">
+      <h2>ComponentC</h2>
+      <ComponentD />
+    </div>
+  );
 }
 
-export default ComponentC
+export default ComponentC;

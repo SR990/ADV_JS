@@ -92,5 +92,42 @@
    
   }
   
+
+  .component-a {
+    background-color: #e0f7fa;
+    border: 2px solid #00bcd4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
   
+  .component-b {
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+  }
+  
+  .component-c {
+    background-color: #fff3e0;
+    border: 2px solid #ff9800;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+  }
+  
+  .component-d {
+    background-color: #fce4ec;
+    border: 2px solid #e91e63;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+  }
+  
+  .welcome-msg {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d81b60;
+  }
   

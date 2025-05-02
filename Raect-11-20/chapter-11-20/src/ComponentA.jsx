@@ -1,26 +1,25 @@
-import ComponentB from "./ComponentB"
-import React,{useState, createContext} from "react"
+import ComponentB from "./ComponentB";
+import React, { useState, createContext } from "react";
 
-export const userContext = createContext();
-function ComponentA(){
 
-    const[user, setUser] = useState("samson")
+export const CreateUser = createContext();
 
-   
+function ComponentA() {
+  const [user, setUser] = useState("samson");
 
-    return(
-        <div className="box">
-            ComponentA
-            <br/>
-            <h2>hello {user}</h2>
-            <br/>
-            <userContext.Provider value={user}>
-            <ComponentB />
+  function changeName() {
+    setUser("Bob");
+  }
 
-            </userContext.Provider>
-           
-        </div>
-    )
+  return (
+    <div className="component-a">
+      <h2>ComponentA</h2>
+      <CreateUser.Provider value={{ user, setUser }}>
+        <ComponentB />
+      </CreateUser.Provider>
+      <button onClick={changeName}>Click ME!</button>
+    </div>
+  );
 }
 
-export default ComponentA
+export default ComponentA;

@@ -6,8 +6,8 @@ function App(){
   return(
     <>
     {/* <MyComponent /> */}
-    <DigitalClock />
-    {/* <ComponentA /> */}
+    {/* <DigitalClock /> */}
+    <ComponentA />
     
     
     
