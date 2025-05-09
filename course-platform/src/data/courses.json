@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "React for Beginners",
+    "description": "Learn the basics of React",
+    "category": "Frontend",
+    "level": "Beginner",
+    "thumbnail": "/assets/images/1.jpeg",
+    "price": 2999,
+    "instructor": "John Doe",
+    "modules": [
+      {
+        "title": "Introduction to React",
+        "lessons": ["What is React?", "JSX Basics", "Creating Components"]
+      },
+      {
+        "title": "State and Props",
+        "lessons": ["Understanding Props", "Managing State", "State vs Props"]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Advanced React Patterns",
+    "description": "Dive into custom hooks and context",
+    "category": "Frontend",
+    "level": "Advanced",
+    "thumbnail": "/assets/images/2.jpg",
+    "price": 4999,
+    "instructor": "Jane Smith",
+    "modules": [
+      {
+        "title": "Custom Hooks",
+        "lessons": ["Why Custom Hooks", "Building a Custom Hook", "Hook Rules"]
+      },
+      {
+        "title": "Context API",
+        "lessons": ["Context Basics", "Using Context", "Performance Tips"]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Node.js Fundamentals",
+    "description": "Build backend APIs using Node.js",
+    "category": "Backend",
+    "level": "Intermediate",
+    "thumbnail": "/assets/images/3.jpg",
+    "price": 3999,
+    "instructor": "Mike Johnson",
+    "modules": [
+      {
+        "title": "Getting Started",
+        "lessons": ["Installing Node", "First App", "Understanding npm"]
+      },
+      {
+        "title": "Building APIs",
+        "lessons": ["Express Intro", "Routing", "Middlewares"]
+      }
+    ]
+  }
+]

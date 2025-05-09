@@ -61,6 +61,7 @@ return (
             <button
               onClick={() => removeTask(index)}
               className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm transition"
+              title="Delete"
             >
               Delete
             </button>

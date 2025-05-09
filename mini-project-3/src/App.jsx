@@ -7,10 +7,10 @@ import ImageCarousel from "./ImageCarousel"
 function App(){
   return (
     <>
-    {/* <ToDoApp /> */}
+    <ToDoApp />
    
-    <ImageCarousel />
-     {/* <SortableTable/>  */}
+    {/* <ImageCarousel />
+     <SortableTable/>  */}
 
 
 
