@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage'
 import CoursesPage from './pages/CoursesPage'
 import MyLearningPage from './pages/MyLearningPage'
 import CourseDetailPage from './components/CourseDetailPage'
-import Footer from './components/Footer'  // Import the Footer component
+import Footer from './components/Footer' 
 
 function App() {
   return (
